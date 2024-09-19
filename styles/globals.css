@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .navBtn {
+    @apply h-6 md:inline-flex cursor-pointer hover:scale-125 transition-all duration-150 ease-out;
+  }
+
+  .btn {
+    @apply h-7 hover:scale-125 cursor-pointer transition-all duration-150 ease-out;
+  }
+
+  /* Custom class for hover effect */
+  .delete-btn-container {
+    @apply relative group;
+  }
+
+  .delete-btn-text {
+    @apply absolute left-1/2 transform -translate-x-1/2 bottom-full mb-2 px-2 py-1 text-xs text-white bg-black rounded-lg opacity-0 group-hover:opacity-100 transition-opacity;
+  }
+}
+
+/* Hide scrollbar class */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Enable horizontal scrolling */
+.scrollable-container {
+  @apply overflow-x-auto;
+}
+
+/* Glass-like effect */
+.glass-effect {
+    @apply bg-gray-800 bg-opacity-50 backdrop-blur-md border border-gray-300;
+  }
